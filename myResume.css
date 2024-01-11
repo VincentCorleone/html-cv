@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "Spectral";
+  src: url("./fonts/Spectral/Spectral-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spectral";
+  src: url("./fonts/Spectral/Spectral-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url("./fonts/Spartan/Spartan-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url("./fonts/Spartan/Spartan-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("./fonts/JetBrainsMono/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("./fonts/JetBrainsMono/JetBrainsMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  font-family: "JetBrainsMono";
+}
+
+#mainDetails {
+  padding: 30px 40px;
+  display: flex;
+}
+
+:root {
+  --primary-color: #e28859;
+  /* --primary-color: #702037; */
+}
+
+#name h1 {
+  font-family: "Spectral";
+  font-weight: normal;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 15px;
+}
+
+#profile {
+  margin-top: 10px;
+}
+
+p {
+  font-size: 13px;
+}
+
+#leftSide {
+  width: 60%;
+}
+
+#mainArea {
+  padding: 0 35px 15px 35px;
+}
+#cv {
+  z-index: 10;
+  position: relative;
+  width: 90%;
+  background-color: #ffffff;
+  max-width: 794px;
+  margin: 30px auto;
+}
+
+body {
+  background-color: #181818;
+  -webkit-print-color-adjust: exact;
+}
+
+.section-title {
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  /*CSS伪类用法*/
+  position: absolute;
+  /*定位背景横线的位置*/
+  top: 40%;
+  background: #eef1f5;
+  /*宽和高做出来的背景横线*/
+  width: 35%;
+  height: 8px;
+}
+
+#skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill {
+  border: #6f7789 2px solid;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 2px 4px;
+}
+
+.section-title::before {
+  left: 0%; /*调整背景横线的左右距离*/
+}
+
+.section-title::after {
+  right: 0%; /*调整背景横线的左右距离*/
+}
+
+.work-details {
+  display: flex;
+
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.work-detail-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li::marker {
+  font-size: 19px;
+  color: var(--primary-color);
+}
+
+.experience {
+  margin-bottom: 10px;
+}
+
+.education-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.circle {
+  position: absolute;
+  z-index: 0;
+}
+
+.big-1 {
+  left: 40px;
+  top: 40px;
+  transform: scale(1.2);
+}
+
+.big-2 {
+  right: 40px;
+  top: 10px;
+}
+
+.big-3 {
+  right: 65px;
+  bottom: 190px;
+}
+
+.little-1 {
+  right: 210px;
+  top: 75px;
+  transform: scale(0.7);
+}
+
+.little-2 {
+  right: 25px;
+  bottom: 85px;
+  transform: scale(0.7);
+}
+
+#document {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+@media print {
+  #cv {
+    width: 100%;
+  }
+}
